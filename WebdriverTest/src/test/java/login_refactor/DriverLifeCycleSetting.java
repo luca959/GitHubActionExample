@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverLifeCycleSetting {
 	
 	protected WebDriver driver;
-	
+	//prova
 	@BeforeAll
 	public static void setupClass() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\lucaf\\Desktop\\chromedriver.exe");
