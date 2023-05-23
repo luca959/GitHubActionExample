@@ -7,13 +7,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class DriverLifeCycleSetting {
 	
 	protected WebDriver driver;
 	//prova
 	@BeforeAll
 	public static void setupClass() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\lucaf\\Desktop\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();		
 	}
 	
 	@BeforeEach
