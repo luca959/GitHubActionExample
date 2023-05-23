@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -15,12 +16,15 @@ public class DriverLifeCycleSetting {
 	//prova
 	@BeforeAll
 	public static void setupClass() {
-		WebDriverManager.chromedriver().setup();		
+		WebDriverManager.chromedriver().setup();
+		
 	}
 	
 	@BeforeEach
 	void setup() {
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
 	}
 
 	@AfterEach
