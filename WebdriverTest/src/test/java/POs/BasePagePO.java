@@ -3,7 +3,7 @@ package POs;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-//prova action prova 
+//prova action prov
 public class BasePagePO {
 	protected WebDriver driver;
 	
